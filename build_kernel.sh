@@ -39,7 +39,6 @@ CONFIG_SECTION_MISMATCH_WARN_ONLY=y \
 build_kernel(){
     make ${ARGS} clean && make ${ARGS} mrproper
     make ${ARGS} a04e_defconfig custom.config
-    make ${ARGS} menuconfig
     make ${ARGS} || exit 1
     cp out/arch/arm64/boot/Image.gz $(pwd)/arch/arm64/boot/Image.gz
 }
